@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Cookie';
+    src: url('Cookie-Regular.eot');
+    src: url('Cookie-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Cookie-Regular.woff2') format('woff2'),
+        url('Cookie-Regular.woff') format('woff'),
+        url('Cookie-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('Avenir-Heavy.eot');
+    src: url('Avenir-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('Avenir-Heavy.woff2') format('woff2'),
+        url('Avenir-Heavy.woff') format('woff'),
+        url('Avenir-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('Avenir-Roman.eot');
+    src: url('Avenir-Roman.eot?#iefix') format('embedded-opentype'),
+        url('Avenir-Roman.woff2') format('woff2'),
+        url('Avenir-Roman.woff') format('woff'),
+        url('Avenir-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

@@ -1,6 +1,7 @@
 var Pages = Pages || {}
 Pages.register=function() {
   console.log('Register');
+  $body.attr('class', 'bg-linear-gradient');
   $main.html($('#register').html());
   $('#form-submit').on('click', function() {
     var name = $('input[name=heroName]').val();
