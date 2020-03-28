@@ -1,0 +1,71 @@
+body{
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 4em;
+}
+
+div.main{
+    /* min-width:100vw; */
+    min-height:100vh;
+    max-width: 510px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 35%, rgba(127,160,255,1) 100%);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.42);
+}
+
+.sh-form > input {
+    color: #e61664;
+    border-radius: 21px;
+    width: 80%;
+    height: 2.2em;
+    padding: 10px 20px;
+    margin-left: 5%;
+    font-weight: bold;
+    border-style: solid;
+    border-color: #e61664;
+}
+
+.sh-actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.sh-actions a, .sh-actions a:visited{
+    color: #fff;
+    text-decoration: none;
+}
+
+.sh-mission {
+    font-family: 'Times New Roman', Times, serif;
+    color: #082660;
+    font-weight: 500;
+    padding: 0.5em 2em;
+    line-height: 1.4em;
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+.sh-btn{
+    font-weight: 600;
+    color: #fff;
+    padding: 1em 2em;
+    height: 1em;
+    border-radius: 35px;
+}
+
+.btn-blue{background-color: #082660;}
+.btn-red{background-color: #e61664;}
+
+.fl-right{float: right; margin: 0.5em;}
