@@ -156,3 +156,12 @@ h2 {
 .page-gain .content {
     margin-top: 5em;
 }
+
+.page-capacity .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+}
+
+.block{display: block;}

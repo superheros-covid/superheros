@@ -67,10 +67,27 @@
 
     <footer>
         <div class="text-right">
-            <a href="#dashboard" class="sh-btn-image sh-btn-arrow btn-blue" style="margin-right: 1em;">Commencer le test</a>
+            <a href="#capacity" class="sh-btn-image sh-btn-arrow btn-blue" style="margin-right: 1em;">Commencer le test</a>
         </div>
       <img src="/img/lines.png" class="sh-background">
     </footer>
+  </template>
+  <template style="display: none" id="capacity">
+      <header>
+          <h2 class="text-blue text-center">Comment sont vos supers pouvoirs</h2>
+      </header>
+      <a href="#" class="text-center">
+          <img src="img/4-pouvoirs/fievre.png" alt="Fièvre" class="block">
+          J'ai de la fièvre
+      </a>
+      <a href="#" class="text-center">
+          <img src="img/4-pouvoirs/toux.png" alt="Toux" class="block">
+          J'ai une toux
+      </a>
+      <a href="#" class="text-center">
+          <img src="img/4-pouvoirs/bon.png" alt="Normal" class="block">
+          Je suis en forme
+      </a>
   </template>
   <template style="display: none" id="gain">
       <div class="radial-gradient">
@@ -98,6 +115,7 @@
   <script src="/js/pages/404.js"></script>
   <script src="/js/pages/home.js"></script>
   <script src="/js/pages/register.js"></script>
+  <script src="/js/pages/capacity.js"></script>
   <script src="/js/pages/welcome.js"></script>
   <script src="/js/pages/gain.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/rlite-router/2.0.3/rlite.min.js" integrity="sha256-AuYI0PQIoQomeRivOr1FWcoJNQXdjT8ek5PUsykpuWQ=" crossorigin="anonymous"></script>
@@ -113,6 +131,8 @@
 
       //
       'welcome': Pages.welcome,
+
+      'capacity': Pages.capacity,
 
       //
       'gain': Pages.gain,
