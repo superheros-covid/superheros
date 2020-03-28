@@ -21,7 +21,7 @@ img.full-size {
         width: auto;
     }
 div.main{
-    /* min-width:100vw; */
+    width:100vw;
     min-height:100vh;
     max-width: 510px;
     display: flex;
@@ -136,10 +136,10 @@ h2 {
     color: #fff;
 }
 .text-blue {
-    color: #153F92;
+    color: #153F92 !important;
 }
 .text-red {
-    color: #e71165;
+    color: #e71165 !important;
 }
 .text-center {
     text-align: center;
@@ -167,3 +167,65 @@ h2 {
 .capacity-choice{font-size: 1.6em; font-weight: 600;}
 .centered{margin: auto;}
 .block{display: block;}
+
+/**
+ * PAGE DASHBOARD
+ */
+.page-dashboard .hero-name-separator {
+    min-height: 50vh;
+    max-height: 500px;
+    position: relative;
+}
+    [data-team=blue] .page-dashboard  .hero-name-separator {
+        background: url(/img/7-dashbaord/blue/bg.png) center bottom no-repeat;
+    }
+    [data-team=orange] .page-dashboard  .hero-name-separator {
+        background: url(/img/7-dashbaord/orange/bg.png) center bottom no-repeat;
+    }
+    [data-team=yellow] .page-dashboard  .hero-name-separator {
+        background: url(/img/7-dashbaord/yellow/bg.png) center bottom no-repeat;
+    }
+    [data-team=red] .page-dashboard  .hero-name-separator {
+        background: url(/img/7-dashbaord/red/bg.png) center bottom no-repeat;
+    }
+    .page-dashboard .hero-name-separator h2 {
+        margin: 0;
+    }
+    .page-dashboard .hero-name-separator p {
+        margin: 0;
+    }
+.page-dashboard .sh-actions a {
+    font-size: 1em;
+    width: 50%;
+}
+
+.page-dashboard .sh-actions {
+    min-height:20vh;
+    margin-top: -10vh;
+}
+    .page-dashboard .sh-actions a img {
+        width: auto;
+        margin-bottom: 10px;
+        height: 60px;
+    }
+.page-dashboard footer {
+    min-height:30vh;
+}
+.page-dashboard footer.sh-background {
+    background: url(/img/7-dashbaord/footer-bg.png) left bottom no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    .page-dashboard footer.sh-background a {
+        width:50%;
+        height: auto;
+    }
+.page-dashboard .colored-profile {
+    height: 20vh;
+    width: auto;
+}
+
+.page-dashboard .content {
+    margin-bottom: 130px;
+}

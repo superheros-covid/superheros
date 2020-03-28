@@ -9,7 +9,7 @@
   <style>
   </style>
 </head>
-<body>
+<body data-team="blue">
   <div class="main">
 
   </div>
@@ -111,6 +111,25 @@
         </footer>
       </div>
   </template>
+  <template style="display: none" id="dashboard">
+    <div class="hero-name-separator">
+        <div class="content text-center">
+            <img class="colored-profile">
+            <h2 data-local-storage data-property="innerHTML" data-key="name"></h2>
+            <p>Jeune recrue</p>
+        </div>
+    </div>
+
+      <div class="sh-actions">
+          <a href="#reward" class="text-blue text-center"><img class="colored-reward"><br>Récompenses</a>
+          <a href="#trophy" class="text-blue text-center"><img class="colored-trophy"><br>Trophées</a>
+      </div>
+
+      <footer class="sh-background">
+          <a href="#dailyChallenge" class="sh-btn btn-red text-center">Défis quotidiens en cours</a><br>
+          <a href="#newChallenge" class="sh-btn btn-blue text-center">Nouveaux défis</a><br><br>
+      </footer>
+  </template>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="/js/pages/404.js"></script>
   <script src="/js/pages/home.js"></script>
@@ -118,6 +137,7 @@
   <script src="/js/pages/capacity.js"></script>
   <script src="/js/pages/welcome.js"></script>
   <script src="/js/pages/gain.js"></script>
+  <script src="/js/pages/dashboard.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/rlite-router/2.0.3/rlite.min.js" integrity="sha256-AuYI0PQIoQomeRivOr1FWcoJNQXdjT8ek5PUsykpuWQ=" crossorigin="anonymous"></script>
   <script>
     var $main = $('.main');
@@ -152,6 +172,17 @@
         var $this = $(this);
         this[$(this).data('property')] = localStorage.getItem($this.data('key'));
       })
+    }
+
+    function teamNeeded() {
+      team = localStorage.getItem('team');
+      if(!team || -1 === ['blue','yellow','orange','red'].indexOf(team)) {
+        document.location.hash='welcome';
+        return;
+      }
+
+      $body.attr('data-team',team);
+      return team
     }
 
     window.addEventListener('hashchange', processHash);
