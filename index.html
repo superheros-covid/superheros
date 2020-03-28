@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SuperHeros</title>
+    <link rel="stylesheet" href="http://neptunae.fr/style.css">
+  <style>
+    .lets-go-btn {
+      border: none;
+      background: none;
+      cursor: pointer;
+      outline: none;
+    }
+    input[type=text] {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+
+  </div>
+  <template style="display: none" id="home">
+    <header>
+      <img src="img/logo.png" alt="Logo" class="sh-logo">
+    </header>
+
+    <div class="sh-actions">
+      <a href="#register" class="sh-btn btn-red">Démarrer</a>
+    </div>
+
+    <footer>
+      <img src="img/bg.png" class="sh-background">
+    </footer>
+  </template>
+  <template style="display: none" id="notFound">
+    <header>
+      <img src="img/logo.png" alt="Logo" class="sh-logo">
+    </header>
+
+    <div class="sh-actions">
+      <h3>Not found</h3>
+    </div>
+  </template>
+
+  <template style="display: none" id="register">
+    <header>
+      <img src="img/createprofile.png" alt="Votre profil">
+    </header>
+
+    <div class="sh-form">
+      <input type="text" placeholder="Nom de héros" name="heroName">
+    </div>
+
+    <div class="sh-actions">
+      <button id="form-submit" class="lets-go-btn">
+        <img src="img/letsgo.png" alt="Allons-y">
+      </button>
+    </div>
+
+    <footer>
+      <img src="img/stripes.png" class="sh-background">
+    </footer>
+  </template>
+  <template style="display: none" id="welcome">
+    <header>
+      <img src="img/welcome.png" alt="Bienvenue">
+    </header>
+
+    <div class="sh-mission">
+      <p>Félicitation <span data-local-storage data-property="innerHTML" data-key="name"></span> !</p>
+      <p>Vous venez de rejoindre la grande famille des super-héros qui se battent contre le covid-19.</p>
+      <p>Votre mission si vous l'acceptez est de nous aider à sauver des vies !</p>
+      <p>Mais avant cela nous vous proposons de tester vos aptitudes physiques afin de vous affilier à votre équipe !</p>
+    </div>
+
+    <footer>
+      <a href="#test" class="sh-btn btn-blue fl-right">Commencer le test</a>
+      <img src="img/lines.png" class="sh-background">
+    </footer>
+  </template>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/pages/404.js"></script>
+  <script src="js/pages/home.js"></script>
+  <script src="js/pages/register.js"></script>
+  <script src="js/pages/welcome.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rlite-router/2.0.3/rlite.min.js" integrity="sha256-AuYI0PQIoQomeRivOr1FWcoJNQXdjT8ek5PUsykpuWQ=" crossorigin="anonymous"></script>
+  <script>
+    var $main = $('.main');
+    route = Rlite(Pages.notFound, {
+      // Default route
+      '': Pages.home,
+
+      // #register
+      'register': Pages.register,
+
+      // #sent?to=john -> params.to will equal 'john'
+      'welcome': Pages.welcome,
+    });
+
+    // Hash-based routing
+    function processHash() {
+      const hash = location.hash || '#';
+
+      // Do something useful with the result of the route
+      route(hash.slice(1));
+      $main.find('[data-local-storage]').each(function() {
+        var $this = $(this);
+        this[$(this).data('property')] = localStorage.getItem($this.data('key'));
+      })
+    }
+
+    window.addEventListener('hashchange', processHash);
+    processHash();
+  </script>
+</body>
+</html>
