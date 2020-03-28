@@ -14,7 +14,7 @@ header{
     padding-top: 4em;
     padding-bottom: 1em;
 }
-img {
+img.full-size {
     width: 100%;
 }
     img.not-100pc {
@@ -164,6 +164,6 @@ h2 {
     font-weight: 600;
 }
 .page-capacity img{width: 250px;}
-.capacity-choice{font-size: 1.6em;}
+.capacity-choice{font-size: 1.6em; font-weight: 600;}
 .centered{margin: auto;}
 .block{display: block;}
