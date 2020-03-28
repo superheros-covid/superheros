@@ -82,7 +82,7 @@ body.bg-linear-gradient div.main{
     display: inline-block;
 }
 
-.btn-blue{background-color: #082660;}
+.btn-blue{background-color: #082660; color:#fff}
 .btn-red{background-color: #e61664;}
 
 .fl-right{float: right; margin: 0.5em;}
