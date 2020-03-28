@@ -1,19 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>SuperHeros</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/fonts/stylesheet.css">
     <link rel="stylesheet" href="/css/style.css">
   <style>
-    .lets-go-btn {
-      border: none;
-      background: none;
-      cursor: pointer;
-      outline: none;
-    }
-    input[type=text] {
-      outline: none;
-    }
   </style>
 </head>
 <body>
@@ -29,9 +22,7 @@
       <a href="#register" class="sh-btn btn-red">Démarrer</a>
     </div>
 
-    <footer>
-      <img src="/img/bg.png" class="sh-background">
-    </footer>
+    <footer><img src="/img/bg.png" class="sh-background"></footer>
   </template>
   <template style="display: none" id="notFound">
     <header>
@@ -45,7 +36,7 @@
 
   <template style="display: none" id="register">
     <header>
-      <img src="/img/createprofile.png" alt="Votre profil">
+        <h1 class="text-blue">Création<br>de votre profil</h1>
     </header>
 
     <div class="sh-form">
@@ -64,7 +55,7 @@
   </template>
   <template style="display: none" id="welcome">
     <header>
-      <img src="/img/welcome.png" alt="Bienvenue">
+        <h1 class="text-red">Bienvenue à toi<br>jeune recrue</h1>
     </header>
 
     <div class="sh-mission">
@@ -79,29 +70,60 @@
       <img src="/img/lines.png" class="sh-background">
     </footer>
   </template>
+  <template style="display: none" id="gain">
+      <div class="radial-gradient">
+        <header>
+            <h1 class="text-white">Félicitations</h1>
+        </header>
+
+        <div class="badge-wrapper">
+            <img src="/img/6-gain/flash.png" alt="flash"/>
+            <img src="/img/6-gain/badge.png" alt="badge"/>
+        </div>
+        <div class="content text-center">
+            <h2>Nouvelle récompense</h2>
+            <p>Vous venez de remporter une nouvelle récompense ! Retrouvez-là dans le panneau récompense de votre tableau de bord.</p>
+        </div>
+
+        <footer>
+            <div class="text-right">
+                <a href="#dashboard" class="sh-btn-image sh-btn-arrow btn-blue"><img src="/img/arrow_right_white.png" style="height: 2.4em;" class="not-100pc"></a>
+            </div>
+        </footer>
+      </div>
+  </template>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="/js/pages/404.js"></script>
   <script src="/js/pages/home.js"></script>
   <script src="/js/pages/register.js"></script>
   <script src="/js/pages/welcome.js"></script>
+  <script src="/js/pages/gain.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/rlite-router/2.0.3/rlite.min.js" integrity="sha256-AuYI0PQIoQomeRivOr1FWcoJNQXdjT8ek5PUsykpuWQ=" crossorigin="anonymous"></script>
   <script>
     var $main = $('.main');
+    var $body = $('body');
     route = Rlite(Pages.notFound, {
       // Default route
       '': Pages.home,
 
-      // #register
+      //
       'register': Pages.register,
 
-      // #sent?to=john -> params.to will equal 'john'
+      //
       'welcome': Pages.welcome,
+
+      //
+      'gain': Pages.gain,
+
+      //
+      'dashboard': Pages.dashboard,
     });
 
     // Hash-based routing
     function processHash() {
       const hash = location.hash || '#';
 
+      $body.attr('class','');
       // Do something useful with the result of the route
       route(hash.slice(1));
       $main.find('[data-local-storage]').each(function() {

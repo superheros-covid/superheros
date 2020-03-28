@@ -1,7 +1,10 @@
 body{
-    margin: 0px;
+    margin: 0;
     display: flex;
     justify-content: center;
+    font-family: 'Avenir', sans-serif;
+    font-weight: normal;
+    font-style: normal;
 }
 
 header{
@@ -9,8 +12,14 @@ header{
     justify-content: center;
     align-content: center;
     padding-top: 4em;
+    padding-bottom: 1em;
 }
-
+img {
+    width: 100%;
+}
+    img.not-100pc {
+        width: auto;
+    }
 div.main{
     /* min-width:100vw; */
     min-height:100vh;
@@ -19,8 +28,10 @@ div.main{
     flex-direction: column;
     justify-content: space-between;
     background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 35%, rgba(127,160,255,1) 100%);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.42);
+}
+body.bg-linear-gradient div.main{
+    background: linear-gradient(0deg, rgba(255,255,255,1) 35%, rgba(127,160,255,1) 100%);
 }
 
 .sh-form > input {
@@ -42,15 +53,13 @@ div.main{
     flex-grow: 1;
 }
 
-.sh-actions a, .sh-actions a:visited{
+.sh-actions a, .sh-actions a:visited, .sh-actions button, .sh-actions button:visited{
     color: #fff;
     text-decoration: none;
 }
 
 .sh-mission {
-    font-family: 'Times New Roman', Times, serif;
     color: #082660;
-    font-weight: 500;
     padding: 0.5em 2em;
     line-height: 1.4em;
     font-size: 1.5em;
@@ -58,14 +67,92 @@ div.main{
 }
 
 .sh-btn{
-    font-weight: 600;
+    font-weight: bold;
     color: #fff;
     padding: 1em 2em;
     height: 1em;
     border-radius: 35px;
+    text-decoration: none;
+}
+
+.sh-btn-image{
+    padding: .5em 1em;
+    border-radius: 35px;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn-blue{background-color: #082660;}
 .btn-red{background-color: #e61664;}
 
 .fl-right{float: right; margin: 0.5em;}
+
+.radial-gradient {
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(30,87,153,0) 0%, rgba(76,87,208,1) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(30,87,153,0) 0%, rgba(76,87,208,1)100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center,  rgba(30,87,153,0) 0%,rgba(76,87,208,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#7fa0ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    width:100%;
+    min-height:100vh
+}
+
+.lets-go-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+}
+input[type=text] {
+    outline: none;
+}
+
+.badge-wrapper {
+    position: relative;
+}
+    .badge-wrapper img + img {
+        position: absolute;
+        width: 200px;
+        top: 50%;
+        left: 50%;
+        margin-left: -100px;
+        margin-top: -100px;
+    }
+
+h1 {
+    font-family: 'Cookie', cursive;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 5em;
+    margin: 0;
+    text-align: center;
+}
+h2 {
+    font-family: 'Avenir', sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 2em;
+}
+.text-white {
+    color: #fff;
+}
+.text-blue {
+    color: #153F92;
+}
+.text-red {
+    color: #e71165;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+
+.content {
+    margin:1em;
+    color:#fff;
+}
+
+.page-gain .content {
+    margin-top: 5em;
+}
