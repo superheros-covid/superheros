@@ -176,16 +176,16 @@ h2 {
     max-height: 500px;
     position: relative;
 }
-    [data-team=blue] .page-dashboard  .hero-name-separator {
+    [data-team=blue].page-dashboard  .hero-name-separator {
         background: url(/img/7-dashbaord/blue/bg.png) center bottom no-repeat;
     }
-    [data-team=orange] .page-dashboard  .hero-name-separator {
+    [data-team=orange].page-dashboard  .hero-name-separator {
         background: url(/img/7-dashbaord/orange/bg.png) center bottom no-repeat;
     }
-    [data-team=yellow] .page-dashboard  .hero-name-separator {
+    [data-team=yellow].page-dashboard  .hero-name-separator {
         background: url(/img/7-dashbaord/yellow/bg.png) center bottom no-repeat;
     }
-    [data-team=red] .page-dashboard  .hero-name-separator {
+    [data-team=red].page-dashboard  .hero-name-separator {
         background: url(/img/7-dashbaord/red/bg.png) center bottom no-repeat;
     }
     .page-dashboard .hero-name-separator h2 {
