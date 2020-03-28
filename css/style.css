@@ -163,5 +163,7 @@ h2 {
     align-items: center;
     font-weight: 600;
 }
-
+.page-capacity img{width: 250px;}
+.capacity-choice{font-size: 1.6em;}
+.centered{margin: auto;}
 .block{display: block;}
