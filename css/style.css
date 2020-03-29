@@ -52,7 +52,10 @@ body.bg-linear-gradient div.main{
     align-items: center;
     flex-grow: 1;
 }
-
+button {
+    background: none;
+    border: none;
+}
 .sh-actions a, .sh-actions a:visited, .sh-actions button, .sh-actions button:visited{
     color: #fff;
     text-decoration: none;
@@ -98,6 +101,19 @@ body.bg-linear-gradient div.main{
     background-color:#e71265;
 }
 
+[data-team=blue] .text-color-team {
+    color:#50C0DB;
+}
+[data-team=yellow] .color-team {
+    color:#F9AF1A;
+}
+[data-team=orange] .color-team {
+    color:#EC681B;
+}
+[data-team=pink] .color-team {
+    color:#e71265;
+}
+
 .fl-right{float: right; margin: 0.5em;}
 
 .radial-gradient {
@@ -122,6 +138,9 @@ input[type=text] {
 .badge-wrapper {
     position: relative;
 }
+    .badge-wrapper img:first-child {
+        width: 100%;
+    }
     .badge-wrapper img + img {
         position: absolute;
         width: 200px;
@@ -167,10 +186,6 @@ h2 {
 }
 .centered{margin: auto;}
 .block{display: block;}
-
-.page-gain .content {
-    margin-top: 5em;
-}
 
 /***
  * Page Capacity
@@ -220,6 +235,28 @@ h2 {
 .page-capacity footer {
     flex-direction: column;
     height:6vh;
+}
+/**
+ * Page welcomeTeam
+ */
+.page-welcomeTeam .mask-wrapper{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+    .page-welcomeTeam .mask-wrapper h2{
+        font-size: 1.75em;
+    }
+    .page-welcomeTeam .mask-wrapper img{
+        max-width:400px;
+        width:80%;
+    }
+
+
+/***
+ * Page Gain
+ */
+.page-gain .content {
+    margin-top: 1em;
 }
 /**
  * PAGE DASHBOARD

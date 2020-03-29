@@ -97,6 +97,22 @@
           </div>
       </footer>
   </template>
+  <template style="display: none" id="welcomeTeam">
+      <header>
+          <h1 class="text-blue">Bienvenue !</h1>
+      </header>
+
+      <div class="mask-wrapper text-center">
+          <div><img class="colored-mask"></div>
+          <h2 class="text-blue">L'équipe <span class="text-color-team"></span><br>est fière de vous accueillir !</h2>
+      </div>
+
+      <footer>
+          <div class="text-right">
+              <a href="#gain" style="margin-right: 1em;margin-bottom: 1em;"><img src="/img/arrow-right-white.png" class="not-100pc"></a>
+          </div>
+      </footer>
+  </template>
   <template style="display: none" id="gain">
       <div class="radial-gradient">
         <header>
@@ -105,7 +121,7 @@
 
         <div class="badge-wrapper">
             <img src="/img/6-gain/flash.png" alt="flash"/>
-            <img src="/img/6-gain/badge.png" alt="badge"/>
+            <img class="colored-badge" alt="badge"/>
         </div>
         <div class="content text-center">
             <h2>Nouvelle récompense</h2>
@@ -144,8 +160,8 @@
   <script src="/js/pages/register.js"></script>
   <script src="/js/pages/welcome.js"></script>
   <script src="/js/pages/capacity.js"></script>
-  <script src="/js/pages/welcomeTeam.js"></script>
   <script src="/js/pages/gain.js"></script>
+  <script src="/js/pages/welcomeTeam.js"></script>
   <script src="/js/pages/dashboard.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/rlite-router/2.0.3/rlite.min.js" integrity="sha256-AuYI0PQIoQomeRivOr1FWcoJNQXdjT8ek5PUsykpuWQ=" crossorigin="anonymous"></script>
   <script>
@@ -177,7 +193,7 @@
     }
 
     function teamNeeded() {
-      team = localStorage.getItem('team');
+      var team = localStorage.getItem('team');
       if(!team || -1 === ['blue','yellow','orange','pink'].indexOf(team)) {
         document.location.hash='welcome';
         return;
@@ -185,6 +201,58 @@
 
       $body.attr('data-team',team);
       return team
+    }
+
+    function getTeamName(feminine, plural) {
+      var team = teamNeeded();
+
+      var teams = {
+        pink: {
+          masculine: 'rose',
+          feminine: 'rose',
+          masculinePlural: 'roses',
+          femininePlural: 'roses'
+        },
+        yellow: {
+          masculine: 'jaune',
+          feminine: 'jaune',
+          masculinePlural: 'jaunes',
+          femininePlural: 'jaunes'
+        },
+        blue: {
+          masculine: 'bleu',
+          feminine: 'bleue',
+          masculinePlural: 'bleus',
+          femininePlural: 'bleues'
+        },
+        orange: {
+          masculine: 'orange',
+          feminine: 'orange',
+          masculinePlural: 'oranges',
+          femininePlural: 'oranges'
+        },
+      };
+
+      if(feminine) {
+        if(plural) {
+          return teams[team].femininePlural;
+        } else {
+          return teams[team].feminine;
+        }
+      } else {
+        if(plural) {
+          return teams[team].masculinePlural;
+        } else {
+          return teams[team].masculine;
+        }
+      }
+    }
+    function ucFirst(str) {
+      if (str.length > 0) {
+        return str[0].toUpperCase() + str.substring(1);
+      } else {
+        return str;
+      }
     }
 
     window.addEventListener('hashchange', processHash);

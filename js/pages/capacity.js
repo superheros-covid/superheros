@@ -55,7 +55,6 @@ Pages.capacity=function() {
         localStorage.setItem('team', 'yellow');
       }
     }
-    alert('temporary redirect to dashboard');
-    document.location.hash="dashboard"
+    document.location.hash="welcomeTeam"
   })
 };
