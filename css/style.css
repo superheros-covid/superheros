@@ -385,8 +385,15 @@ h2 {
     border-radius: 21px;
     font-size: 1.4em;
     padding: 10px;
+}
+
+.task>.label.undone{
     background-color: #e61664;
 }
+.task>.label.completed{
+    background-color: green;
+}
+
 
 .btn-action{
     background-color: #153F92;

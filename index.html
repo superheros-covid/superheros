@@ -181,21 +181,25 @@
     </template>
   <template style="display: none" id="tasks">
     <h1 class="text-blue text-center">Vos défis en cours</h1>
-    <div class="task">
-        <span class="label" data-local-storage data-property="innerHTML" data-key="taskone"></span>
-        <span class="btn-action">Valider le défi</span>
-        <span class="btn-action">Annuler</span>
+    <span class="text-blue">Cliquer sur l'activité pour la démarrer</span>
+    <div id="one" class="task unactive undone">
+        <span class="label" data-local-storage data-property="innerHTML" data-key="taskone" onclick="start('one')"></span>
+        <button class="btn-action" hidden="" onclick="achieve('one')">Valider le défi</button>
+        <button class="btn-action" hidden="" onclick="cancel('one')">Annuler</button>
     </div>
-    <div class="task">
-        <span class="label" data-local-storage data-property="innerHTML" data-key="tasktwo"></span>
-        <span class="btn-action">Valider le défi</span>
-        <span class="btn-action">Annuler</span>
+    <div id="two" class="task unactive undone">
+        <span class="label" data-local-storage data-property="innerHTML" data-key="tasktwo" onclick="start('two')"></span>
+        <button class="btn-action" hidden="" onclick="achieve('two')">Valider le défi</button>
+        <button class="btn-action" hidden="" onclick="cancel('two')">Annuler</button>
     </div>
-    <div class="task">
-        <span class="label" data-local-storage data-property="innerHTML" data-key="taskthree"></span>
-        <span class="btn-action">Valider le défi</span>
-        <span class="btn-action">Annuler</span>
+    <div id="three" class="task unactive undone">
+        <span class="label" data-local-storage data-property="innerHTML" data-key="taskthree" onclick="start('three')"></span>
+        <button class="btn-action" hidden="" onclick="achieve('three')">Valider le défi</button>
+        <button class="btn-action" hidden="" onclick="cancel('three')">Annuler</button>
     </div>
+
+    <a href="#challenge" class="sh-btn btn-blue text-center">Nouveaux défis</a>
+    <a href="#dashboard" class="sh-btn btn-blue text-center">Retour</a>
   </template>
   <template style="display: none" id="soon">
       <header>
