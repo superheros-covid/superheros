@@ -152,22 +152,62 @@ h2 {
     margin:1em;
     color:#fff;
 }
+.centered{margin: auto;}
+.block{display: block;}
 
 .page-gain .content {
     margin-top: 5em;
 }
 
+/***
+ * Page Capacity
+ */
 .page-capacity .content{
     display: flex;
     flex-direction: column;
     align-items: center;
     font-weight: 600;
 }
-.page-capacity img{width: 250px;}
-.capacity-choice{font-size: 1.6em; font-weight: 600;}
-.centered{margin: auto;}
-.block{display: block;}
+.page-capacity header {
+    height:25vh;
+    padding: 0;
+}
+    .page-capacity header {
+        margin: 0;
+    }
+        .page-capacity header h2{
+            align-self: center;
+        }
 
+.page-capacity button[disabled]{
+    opacity:0.65
+}
+.page-capacity .sh-actions {
+    flex-direction: column;
+    height:69vh;
+}
+    .page-capacity .sh-actions button{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        max-height: 23vh;
+        align-items: center;
+        font-size: 1em;
+        box-sizing: border-box;
+    }
+    .page-capacity .sh-actions button.selected{
+        filter: drop-shadow(0 0 0.75rem #e71165);
+    }
+        .page-capacity .sh-actions button img{
+            flex-grow: 1;
+            width: auto;
+            max-height: 20vh;
+        }
+
+.page-capacity footer {
+    flex-direction: column;
+    height:6vh;
+}
 /**
  * PAGE DASHBOARD
  */
@@ -185,8 +225,8 @@ h2 {
     [data-team=yellow].page-dashboard  .hero-name-separator {
         background: url(/img/7-dashbaord/yellow/bg.png) center bottom no-repeat;
     }
-    [data-team=red].page-dashboard  .hero-name-separator {
-        background: url(/img/7-dashbaord/red/bg.png) center bottom no-repeat;
+    [data-team=pink].page-dashboard  .hero-name-separator {
+        background: url(/img/7-dashbaord/pink/bg.png) center bottom no-repeat;
     }
     .page-dashboard .hero-name-separator h2 {
         margin: 0;

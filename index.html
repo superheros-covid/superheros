@@ -74,20 +74,28 @@
   </template>
   <template style="display: none" id="capacity">
       <header>
-          <h2 class="text-blue text-center">Comment sont vos supers pouvoirs</h2>
+          <h2 class="text-blue text-center">Comment sont<br>vos super pouvoirs ?</h2>
       </header>
-      <a href="#" class="text-center">
-          <img src="img/4-pouvoirs/fievre.png" alt="Fièvre" class="centered block">
-          <span class="capacity-choice">J'ai de la fièvre</span>
-      </a>
-      <a href="#" class="text-center">
-          <img src="img/4-pouvoirs/toux.png" alt="Toux" class="centered block">
-          <span class="capacity-choice">J'ai une toux</span>
-      </a>
-      <a href="#" class="text-center">
-          <img src="img/4-pouvoirs/bon.png" alt="Normal" class="centered block">
-          <span class="capacity-choice">Je suis en forme</span>
-      </a>
+      <div class="sh-actions">
+          <button class="text-center lets-go-btn" id="fever">
+              <img src="img/4-pouvoirs/fievre.png" alt="Fièvre" class="centered block">
+              <span class="text-blue">J'ai de la fièvre</span>
+          </button>
+          <button class="text-center lets-go-btn" id="cough">
+              <img src="img/4-pouvoirs/toux.png" alt="Toux" class="centered block">
+              <span class="text-blue">J'ai une toux</span>
+          </button>
+          <button class="text-center lets-go-btn" id="fine">
+              <img src="img/4-pouvoirs/bon.png" alt="Normal" class="centered block">
+              <span class="text-blue">Je suis en forme</span>
+          </button>
+      </div>
+
+      <footer>
+          <div class="text-right">
+              <button id="setTeam" style="margin-right: 1em;"><img src="/img/arrow-right-white.png" class="not-100pc" style="height: 35px"></button>
+          </div>
+      </footer>
   </template>
   <template style="display: none" id="gain">
       <div class="radial-gradient">
@@ -106,7 +114,7 @@
 
         <footer>
             <div class="text-right">
-                <a href="#dashboard" class="sh-btn-image sh-btn-arrow btn-blue" style="margin-right: 1em;"><img src="/img/arrow_right_white.png" style="height: 2.4em;" class="not-100pc"></a>
+                <a href="#dashboard" style="margin-right: 1em;margin-bottom: 1em;"><img src="/img/arrow-right-white.png" class="not-100pc"></a>
             </div>
         </footer>
       </div>
@@ -134,8 +142,9 @@
   <script src="/js/pages/404.js"></script>
   <script src="/js/pages/home.js"></script>
   <script src="/js/pages/register.js"></script>
-  <script src="/js/pages/capacity.js"></script>
   <script src="/js/pages/welcome.js"></script>
+  <script src="/js/pages/capacity.js"></script>
+  <script src="/js/pages/welcomeTeam.js"></script>
   <script src="/js/pages/gain.js"></script>
   <script src="/js/pages/dashboard.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/rlite-router/2.0.3/rlite.min.js" integrity="sha256-AuYI0PQIoQomeRivOr1FWcoJNQXdjT8ek5PUsykpuWQ=" crossorigin="anonymous"></script>
@@ -146,18 +155,11 @@
       // Default route
       '': Pages.home,
 
-      //
       'register': Pages.register,
-
-      //
       'welcome': Pages.welcome,
-
       'capacity': Pages.capacity,
-
-      //
+      'welcomeTeam': Pages.welcomeTeam,
       'gain': Pages.gain,
-
-      //
       'dashboard': Pages.dashboard,
     });
 
@@ -176,7 +178,7 @@
 
     function teamNeeded() {
       team = localStorage.getItem('team');
-      if(!team || -1 === ['blue','yellow','orange','red'].indexOf(team)) {
+      if(!team || -1 === ['blue','yellow','orange','pink'].indexOf(team)) {
         document.location.hash='welcome';
         return;
       }
