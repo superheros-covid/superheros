@@ -76,6 +76,7 @@ button {
     height: 1em;
     border-radius: 35px;
     text-decoration: none;
+    margin: 2px;
 }
 
 .sh-btn-image{
@@ -343,6 +344,8 @@ h2 {
     display: flex;
     flex-direction:column;
     justify-content: space-between;
+    width: 100%;
+    align-items: center;
 }
 
 .unactive {opacity: 0.4;}
@@ -350,10 +353,34 @@ h2 {
 .red-form{
     color: #fff;
     border-radius: 21px;
-    width: 80%;
     height: 2.2em;
-    padding: 10px;
-    margin-left: 5%;
+    padding: 5px 10px;
     font-weight: bold;
     background-color: #e61664;
+    border-style: solid;
+}
+
+.task{
+    padding: 0.5em;
+    width: 100%;
+    font-weight: 400;
+}
+
+.task>.label{
+    display: block;
+    margin-bottom:0.5em;
+    color: #fff;
+    border-radius: 21px;
+    font-size: 1.4em;
+    padding: 10px;
+    background-color: #e61664;
+}
+.tasks-action,
+.task .action{
+    float: right;
+    background-color: #153F92;
+    color: #fff;
+    padding: 8px 16px;
+    margin-right: 4px;
+    border-radius: 21px;
 }

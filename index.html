@@ -147,19 +147,52 @@
       </div>
 
       <footer class="sh-background">
-          <a href="#tasks" class="sh-btn bg-color-team text-center">Défis quotidiens en cours</a><br>
-          <a href="#soon" class="sh-btn btn-blue text-center">Nouveaux défis</a><br><br>
+          <a href="#challenge" class="sh-btn bg-color-team text-center">Défis quotidiens en cours</a><br>
+          <a href="#tasks" class="sh-btn btn-blue text-center">Nouveaux défis</a><br><br>
       </footer>
   </template>
+  <template style="display: none" id="challenge">
+      <h2 class="text-blue text-center">Choisissez votre prochain défi</h2>
+      <div class="tasks">
+          <input type="text" class="task text-center red-form">
+          <input type="text" class="task text-center red-form">
+          <input type="text" class="task text-center red-form">
+      </div>
+
+      <span class="tasks-action">Valider</span>
+
+    </template>
+    <template style="display: none" id="soon">
+        <header>
+            <img src="/img/logo.png" alt="Logo" class="sh-logo">
+        </header>
+  
+        <div class="text-center">
+            <h1>Bientôt !</h1>
+            <h2 class="text-color-team">Restez chez vous!</h2>
+            <h2 class="hidden visible-blue text-color-team">Vous  éviterez  potentiellement:<ul style="padding-left:0;list-style: none"><li>80 hospitalisations</li><li>40 réanimations</li><li>et 8 décès.</li></ul></h2>
+            <h2 class="hidden visible-yellow text-color-team">Vous  éviterez  potentiellement:<ul style="padding-left:0;list-style: none"><li>100 hospitalisations</li><li>50 réanimations</li><li>et 12 décès.</li></ul></h2>
+            <h2 class="hidden visible-orange text-color-team">Vous  éviterez  potentiellement:<ul style="padding-left:0;list-style: none"><li>100 hospitalisations</li><li>50 réanimations</li><li>et 12 décès.</li></ul></h2>
+            <h2 class="hidden visible-red text-color-team">Vous  éviterez  potentiellement:<ul style="padding-left:0;list-style: none"><li>120 hospitalisations</li><li>60 réanimations</li><li>et 16 décès.</li></ul></h2>
+        </div>
+    </template>
   <template style="display: none" id="tasks">
     <h2 class="text-blue text-center">Vos défis en cours</h2>
-
-    <div class="tasks">
-        <input type="text" class="task red-form">
-        <input type="text" class="task red-form">
-        <input type="text" class="task red-form">
+    <div class="task">
+        <span class="label" data-local-storage data-property="innerHTML" data-key="taskone"></span>
+        <span class="action">Valider le défi</span>
+        <span class="action">Annuler</span>
     </div>
-
+    <div class="task">
+        <span class="label" data-local-storage data-property="innerHTML" data-key="tasktwo"></span>
+        <span class="action">Valider le défi</span>
+        <span class="action">Annuler</span>
+    </div>
+    <div class="task">
+        <span class="label" data-local-storage data-property="innerHTML" data-key="taskthree"></span>
+        <span class="action">Valider le défi</span>
+        <span class="action">Annuler</span>
+    </div>
   </template>
   <template style="display: none" id="soon">
       <header>
@@ -184,6 +217,7 @@
   <script src="/js/pages/capacity.js"></script>
   <script src="/js/pages/gain.js"></script>
   <script src="/js/pages/tasks.js"></script>
+  <script src="/js/pages/challenge.js"></script>
   <script src="/js/pages/welcomeTeam.js"></script>
   <script src="/js/pages/dashboard.js"></script>
   <script src="/js/pages/soon.js"></script>
@@ -201,6 +235,7 @@
       'welcomeTeam': Pages.welcomeTeam,
       'gain': Pages.gain,
       'tasks': Pages.tasks,
+      'challenge': Pages.challenge,
       'dashboard': Pages.dashboard,
       'soon': Pages.soon,
     });
