@@ -85,6 +85,19 @@ body.bg-linear-gradient div.main{
 .btn-blue{background-color: #082660; color:#fff}
 .btn-red{background-color: #e61664;}
 
+[data-team=blue] .bg-color-team {
+    background-color:#50C0DB;
+}
+[data-team=yellow] .bg-color-team {
+    background-color:#F9AF1A;
+}
+[data-team=orange] .bg-color-team {
+    background-color:#EC681B;
+}
+[data-team=pink] .bg-color-team {
+    background-color:#e71265;
+}
+
 .fl-right{float: right; margin: 0.5em;}
 
 .radial-gradient {
