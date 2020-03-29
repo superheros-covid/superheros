@@ -151,18 +151,18 @@
       </div>
 
       <footer class="sh-background">
-          <a href="#challenge" class="sh-btn bg-color-team text-center">Défis quotidiens en cours</a><br>
-          <a href="#tasks" class="sh-btn btn-blue text-center">Nouveaux défis</a><br><br>
+          <a href="#tasks" id="tasks" hidden="" class="sh-btn bg-color-team text-center">Défis quotidiens en cours</a><br>
+          <a href="#challenge" id="challenge" class="sh-btn btn-blue text-center">Nouveaux défis</a><br><br>
       </footer>
   </template>
   <template style="display: none" id="challenge">
       <h2 class="text-blue text-center">Choisissez votre prochain défi</h2>
       <div class="tasks">
-          <input type="text" class="task text-center red-form">
-          <input type="text" class="task text-center red-form">
-          <input type="text" class="task text-center red-form">
+          <input type="text" name="taskOne" class="task text-center red-form">
+          <input type="text" name="taskTwo" class="task text-center red-form">
+          <input type="text" name="taskThree" class="task text-center red-form">
 
-          <span class="btn-action text-center">Valider</span>
+          <button id="form-submit" class="btn-action text-center">Valider</button>
       </div>
     </template>
     <template style="display: none" id="soon">
