@@ -359,7 +359,7 @@ h2 {
     align-items: center;
 }
 
-.unactive {opacity: 0.4;}
+.unactive {opacity: 0.6;}
 
 .red-form{
     color: #fff;
@@ -381,19 +381,20 @@ h2 {
 .task>.label{
     display: block;
     margin-bottom:0.5em;
-    color: #fff;
+    color: #e61664;
     border-radius: 21px;
     font-size: 1.4em;
     padding: 10px;
 }
 
-.task>.label.undone{
+.task.undone>.label{
     background-color: #e61664;
+    color: #fff;
 }
-.task>.label.completed{
+.task.completed>.label{
     background-color: green;
+    color: #fff;
 }
-
 
 .btn-action{
     background-color: #153F92;

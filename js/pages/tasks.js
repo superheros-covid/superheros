@@ -6,9 +6,11 @@ Pages.tasks=function() {
 
 function start(taskId){
   var domElement = $main.find('#'+taskId);
-  domElement.removeClass("unactive")
-  domElement.find(".btn-action")[0].hidden = false;
-  domElement.find(".btn-action")[1].hidden = false;
+  if (domElement.hasClass('completed') == false){
+    domElement.removeClass("unactive")
+    domElement.find(".btn-action")[0].hidden = false;
+    domElement.find(".btn-action")[1].hidden = false;
+  }
 }
 
 function cancel(taskId){
