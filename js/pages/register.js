@@ -7,6 +7,7 @@ Pages.register=function() {
     var name = $('input[name=heroName]').val();
     if(name.length) {
       localStorage.setItem('name', name);
+      localStorage.setItem('startdate', Date());
       document.location.hash='welcome';
     } else {
       alert('Tous les SuperHéros ont un surnom, pas vous ?')
