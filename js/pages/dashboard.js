@@ -11,6 +11,6 @@ Pages.dashboard=function() {
   $main.find('.colored-trophy').attr('src', '/img/colors_decline/'+team+'/trophy.png');
 
   if(localStorage.getItem('hasTask') == 1) {
-    $main.find('#tasks').show();
+    $main.find('#btn-tasks').show();
   }
 };
