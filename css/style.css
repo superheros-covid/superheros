@@ -205,6 +205,17 @@ h2 {
 .block{display: block;}
 
 /***
+ * Home
+ */
+
+.home-subtext{
+    font-size: 1.2em;
+    opacity: 0.7;
+    color: #153F92;
+    font-style: italic;
+}
+
+/***
  * Page Capacity
  */
 .page-capacity .content{
