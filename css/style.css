@@ -373,8 +373,9 @@ h2 {
 
 .task{
     padding: 0.5em;
-    width: 100%;
+    width: 80%;
     font-weight: 400;
+    margin: 1.5em;
 }
 
 .task>.label{
@@ -386,12 +387,18 @@ h2 {
     padding: 10px;
     background-color: #e61664;
 }
-.tasks-action,
-.task .action{
-    float: right;
+
+.btn-action{
     background-color: #153F92;
     color: #fff;
-    padding: 8px 16px;
-    margin-right: 4px;
     border-radius: 21px;
+    padding: 8px 16px;
+    margin: 4px;
+}
+
+.task .btn-action{
+    float: right;
+}
+.tasks .btn-action{
+    width: 50%;
 }

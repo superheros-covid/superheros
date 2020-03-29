@@ -1,5 +1,5 @@
 var Pages = Pages || {}
-Pages.tasks=function() {
+Pages.challenge=function() {
   $main.html($('#challenge').html());
   $body.attr('class', 'page-challenge bg-linear-gradient');
 };
