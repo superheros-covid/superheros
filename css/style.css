@@ -104,14 +104,30 @@ button {
 [data-team=blue] .text-color-team {
     color:#50C0DB;
 }
-[data-team=yellow] .color-team {
+[data-team=yellow] .text-color-team {
     color:#F9AF1A;
 }
-[data-team=orange] .color-team {
+[data-team=orange] .text-color-team {
     color:#EC681B;
 }
-[data-team=pink] .color-team {
+[data-team=pink] .text-color-team {
     color:#e71265;
+}
+
+.hidden {
+    display: none;
+}
+[data-team=blue] .visible-blue {
+    display: block;
+}
+[data-team=yellow] .visible-yellow {
+    display: block;
+}
+[data-team=orange] .visible-orange {
+    display: block;
+}
+[data-team=pink] .visible-pink {
+    display: block;
 }
 
 .fl-right{float: right; margin: 0.5em;}
