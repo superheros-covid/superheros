@@ -398,6 +398,7 @@ h2 {
 
 .task .btn-action{
     float: right;
+    font-size: 0.8em;
 }
 .tasks .btn-action{
     width: 50%;
