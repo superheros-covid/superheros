@@ -149,6 +149,7 @@
           <a href="#soon" class="text-blue text-center"><img class="colored-reward"><br>Récompenses</a>
           <a href="#soon" class="text-blue text-center"><img class="colored-trophy"><br>Trophées</a>
       </div>
+      <div id="life-counter" class="text-center"></div>
 
       <footer class="sh-background">
           <a href="#tasks" id="btn-tasks" hidden="" class="sh-btn bg-color-team text-center">Défis quotidiens en cours</a><br>
@@ -181,7 +182,7 @@
     </template>
   <template style="display: none" id="tasks">
     <h1 class="text-blue text-center">Vos défis en cours</h1>
-    <span class="text-blue">Cliquer sur l'activité pour la démarrer</span>
+    <span class="text-blue text-center">Cliquer sur l'activité pour la démarrer</span>
     <div id="one" class="task unactive undone">
         <span class="label" data-local-storage data-property="innerHTML" data-key="taskone" onclick="start('one')"></span>
         <button class="btn-action" hidden="" onclick="achieve('one')">Valider le défi</button>

@@ -348,6 +348,19 @@ h2 {
     margin-bottom: 130px;
 }
 
+#life-counter{
+	font-size: 1.2em;
+	margin-bottom: 0.5em;
+	background-color: #082660;
+    color: #fff;
+    -webkit-animation:colorchange 4s infinite alternate;
+}
+
+@-webkit-keyframes colorchange {
+    0% {background-color: #50C0DB;}
+    100% {background-color: #082660;}
+  }
+
 /**
  * PAGE TASKS
  */
