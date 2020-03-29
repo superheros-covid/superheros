@@ -33,7 +33,6 @@
       <h3>Not found</h3>
     </div>
   </template>
-
   <template style="display: none" id="register">
     <header>
         <h1 class="text-blue">Création<br>de votre profil</h1>
@@ -148,9 +147,19 @@
       </div>
 
       <footer class="sh-background">
-          <a href="#soon" class="sh-btn bg-color-team text-center">Défis quotidiens en cours</a><br>
+          <a href="#tasks" class="sh-btn bg-color-team text-center">Défis quotidiens en cours</a><br>
           <a href="#soon" class="sh-btn btn-blue text-center">Nouveaux défis</a><br><br>
       </footer>
+  </template>
+  <template style="display: none" id="tasks">
+    <h2 class="text-blue text-center">Vos défis en cours</h2>
+
+    <div class="tasks">
+        <input type="text" class="task red-form">
+        <input type="text" class="task red-form">
+        <input type="text" class="task red-form">
+    </div>
+
   </template>
   <template style="display: none" id="soon">
       <header>
@@ -166,6 +175,7 @@
           <h2 class="hidden visible-red text-color-team">Vous  éviterez  potentiellement:<ul style="padding-left:0;list-style: none"><li>120 hospitalisations</li><li>60 réanimations</li><li>et 16 décès.</li></ul></h2>
       </div>
   </template>
+
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="/js/pages/404.js"></script>
   <script src="/js/pages/home.js"></script>
@@ -173,6 +183,7 @@
   <script src="/js/pages/welcome.js"></script>
   <script src="/js/pages/capacity.js"></script>
   <script src="/js/pages/gain.js"></script>
+  <script src="/js/pages/tasks.js"></script>
   <script src="/js/pages/welcomeTeam.js"></script>
   <script src="/js/pages/dashboard.js"></script>
   <script src="/js/pages/soon.js"></script>

@@ -335,3 +335,25 @@ h2 {
 .page-dashboard .content {
     margin-bottom: 130px;
 }
+
+/**
+ * PAGE TASKS
+ */
+.tasks {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+
+.unactive {opacity: 0.4;}
+
+.red-form{
+    color: #fff;
+    border-radius: 21px;
+    width: 80%;
+    height: 2.2em;
+    padding: 10px;
+    margin-left: 5%;
+    font-weight: bold;
+    background-color: #e61664;
+}
