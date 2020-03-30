@@ -21,8 +21,8 @@ function cancel(taskId){
 }
 
 function achieve(taskId){
-  var finishedTasks = localStorage.getItem('finishedTasks') || 0;
-  var score = localStorage.getItem('score') || 0;
+  var finishedTasks = parseInt(localStorage.getItem('finishedTasks') || 0);
+  var score = parseInt(localStorage.getItem('score') || 0);
   finishedTasks += 1;
   score += 10;
   localStorage.setItem('finishedTasks', finishedTasks);
