@@ -8,6 +8,7 @@ Pages.register=function() {
     if(name.length) {
       localStorage.setItem('name', name);
       localStorage.setItem('startdate', Date());
+      localStorage.setItem('score', 0);
       document.location.hash='welcome';
     } else {
       alert('Tous les SuperHéros ont un surnom, pas vous ?')

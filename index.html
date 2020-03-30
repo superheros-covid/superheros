@@ -147,7 +147,7 @@
 
       <div class="sh-actions">
           <a href="#soon" class="text-blue text-center"><img class="colored-reward"><br>Récompenses</a>
-          <a href="#soon" class="text-blue text-center"><img class="colored-trophy"><br>Trophées</a>
+          <a href="#soon" class="text-blue text-center unactive"><img class="colored-trophy"><br>Trophées</a>
       </div>
       <div id="life-counter" class="text-center"></div>
 
@@ -165,12 +165,30 @@
 
           <a id="form-submit" class="btn-action text-center" href="#tasks">Valider</a>
       </div>
-    </template>
+  </template>
+  <template style="display: none" id="score">
+    <h1 class="text-blue text-center">Médailles</h1>
+
+    <div class="score-label text-center">
+      <p>
+        Vous avez actuellement 
+        <span data-local-storage data-property="innerHTML" data-key="score" class="score-counter">0</span> 
+        points.
+      </p>
+      <p>Continuez à accomplir des missions afin d'obtenir des médailles.</p> 
+    </div>
+
+    <div class="badges-wrapper">
+        <img src="img/6-gain/badge.png" alt="Niveau 1">
+    </div>
+
+    <a href="#dashboard" class="sh-btn btn-blue text-center">Retour</a>
+  </template>
+
     <template style="display: none" id="soon">
         <header>
             <img src="/img/logo.png" alt="Logo" class="sh-logo">
         </header>
-  
         <div class="text-center">
             <h1>Bientôt !</h1>
             <h2 class="text-color-team">Restez chez vous!</h2>
@@ -225,6 +243,7 @@
   <script src="/js/pages/capacity.js"></script>
   <script src="/js/pages/gain.js"></script>
   <script src="/js/pages/tasks.js"></script>
+  <script src="/js/pages/score.js"></script>
   <script src="/js/pages/challenge.js"></script>
   <script src="/js/pages/welcomeTeam.js"></script>
   <script src="/js/pages/dashboard.js"></script>
@@ -243,6 +262,7 @@
       'welcomeTeam': Pages.welcomeTeam,
       'gain': Pages.gain,
       'tasks': Pages.tasks,
+      'score': Pages.score,
       'challenge': Pages.challenge,
       'dashboard': Pages.dashboard,
       'soon': Pages.soon,

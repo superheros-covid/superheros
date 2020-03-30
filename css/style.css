@@ -424,3 +424,14 @@ h2 {
 .tasks .btn-action{
     width: 50%;
 }
+
+/**
+ * PAGE SCORE
+ */
+.score-label{font-size: 1.2em; line-height: 1.6em; margin: 2em;}
+.score-counter{
+    font-weight: 800;
+    color: #e71265;
+    font-size: 2.4em;
+}
+ .badges-wrapper{}
