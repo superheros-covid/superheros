@@ -201,17 +201,17 @@
   <template style="display: none" id="tasks">
     <h1 class="text-blue text-center">Vos défis en cours</h1>
     <span class="text-blue text-center">Cliquer sur l'activité pour la démarrer</span>
-    <div id="one" class="task unactive undone">
+    <div id="one" class="task unactive undone" hidden="">
         <span class="label" data-local-storage data-property="innerHTML" data-key="taskone" onclick="start('one')"></span>
         <button class="btn-action" hidden="" onclick="achieve('one')">Valider le défi</button>
         <button class="btn-action" hidden="" onclick="cancel('one')">Annuler</button>
     </div>
-    <div id="two" class="task unactive undone">
+    <div id="two" class="task unactive undone" hidden="">
         <span class="label" data-local-storage data-property="innerHTML" data-key="tasktwo" onclick="start('two')"></span>
         <button class="btn-action" hidden="" onclick="achieve('two')">Valider le défi</button>
         <button class="btn-action" hidden="" onclick="cancel('two')">Annuler</button>
     </div>
-    <div id="three" class="task unactive undone">
+    <div id="three" class="task unactive undone" hidden="">
         <span class="label" data-local-storage data-property="innerHTML" data-key="taskthree" onclick="start('three')"></span>
         <button class="btn-action" hidden="" onclick="achieve('three')">Valider le défi</button>
         <button class="btn-action" hidden="" onclick="cancel('three')">Annuler</button>
