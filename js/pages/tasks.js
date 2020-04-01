@@ -5,13 +5,13 @@ Pages.tasks=function() {
 
   /* show only non-empy task */
   if (localStorage.getItem('taskone').length) {
-    $main.find('#one').hidden = false;
+    $main.find('#one').show();
   }
   if (localStorage.getItem('tasktwo').length) {
-    $main.find('#two').hidden = false;
+    $main.find('#two').show();
   }
   if (localStorage.getItem('taskthree').length) {
-    $main.find('#three').hidden = false;
+    $main.find('#three').show();
   }
 
  };
