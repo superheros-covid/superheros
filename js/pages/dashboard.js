@@ -10,7 +10,7 @@ Pages.dashboard=function() {
   $main.find('.colored-reward').attr('src', '/img/colors_decline/'+team+'/reward.png');
   $main.find('.colored-trophy').attr('src', '/img/colors_decline/'+team+'/trophy.png');
 
-  if(localStorage.getItem('hasTask') == 1) {
+  if(localStorage.getItem('hasTask') > 0) {
     $main.find('#btn-tasks').show();
   }
 
