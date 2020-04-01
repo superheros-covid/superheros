@@ -8,7 +8,7 @@ Pages.challenge=function() {
   $('#roue').on('click', function() {
     taskIds = ["one", "two", "three"];
     for(let i=0;i<taskIds.length; i++){
-      id = taskIds[id];
+      id = taskIds[i];
       var storedTask = localStorage.getItem('task'+id);
       if (storedTask == null){
         randomTask = getRandomActivity();

@@ -412,6 +412,8 @@ h2 {
     margin: 4px;
 }
 
+.full_width{width: 90%;}
+
 .task .btn-action{
     float: right;
     font-size: 0.8em;
