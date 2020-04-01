@@ -5,13 +5,13 @@ Pages.tasks=function() {
 
   /* show only non-empy task */
   if (localStorage.getItem('taskone').length) {
-    $main.find('#one').show();
+    $main.find('#one').hidden = false;
   }
   if (localStorage.getItem('tasktwo').length) {
-    $main.find('#two').show();
+    $main.find('#two').hidden = false;
   }
   if (localStorage.getItem('taskthree').length) {
-    $main.find('#three').show();
+    $main.find('#three').hidden = false;
   }
 
  };
@@ -20,8 +20,8 @@ function start(taskId){
   var domElement = $main.find('#'+taskId);
   if (domElement.hasClass('completed') == false){
     domElement.removeClass("unactive")
-    domElement.find(".btn-action")[0].show();
-    domElement.find(".btn-action")[1].show();
+    domElement.find(".btn-action")[0].hidden = false;
+    domElement.find(".btn-action")[1].hidden = false;
   }
 }
 
