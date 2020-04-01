@@ -2,6 +2,7 @@ var Pages = Pages || {}
 Pages.challenge=function() {
   $main.html($('#challenge').html());
   $body.attr('class', 'page-challenge bg-linear-gradient');
+  var team = teamNeeded();
   $main.find('.colored-roue').attr('src', '/img/colors_decline/'+team+'/roue.png');
 
   $('#roue').on('click', function() {
@@ -14,7 +15,6 @@ Pages.challenge=function() {
         $('input[name=task'+id+']').val(randomTask);
       }
     }
-
   });
 
   function getRandomArbitrary(min, max) {
@@ -41,29 +41,4 @@ Pages.challenge=function() {
     randomId = getRandomArbitrary(0, activities.length);
     return activities[randomId];
   }
-
-  $('#form-submit').on('click', function() {
-    var taskOne = $('input[name=taskone]').val();
-    var taskTwo = $('input[name=tasktwo]').val();
-    var taskThree = $('input[name=taskthree]').val();
-    var tasksCounter = 0;
-    if(taskOne.length) {
-      localStorage.setItem('taskone', taskOne);
-      tasksCounter += 1;
-    }
-    if(taskTwo.length) {
-      localStorage.setItem('tasktwo', taskTwo);
-      tasksCounter += 1;
-    }
-    if(taskThree.length) {
-      localStorage.setItem('taskthree', taskThree);
-      tasksCounter += 1;
-    }
-    if(tasksCounter == 0) {
-      document.location.hash='dashboard';
-    } else {
-      localStorage.setItem('hasTask', 1);
-      document.location.hash='challenge';
-    }
-  });
 };

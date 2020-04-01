@@ -5,13 +5,13 @@ Pages.tasks=function() {
 
   /* show only non-empy task */
   if (localStorage.getItem('taskone').length) {
-    $main.find('#one').hidden = false;
+    $main.find('#one').show();
   }
   if (localStorage.getItem('tasktwo').length) {
-    $main.find('#two').hidden = false;
+    $main.find('#two').show();
   }
   if (localStorage.getItem('taskthree').length) {
-    $main.find('#three').hidden = false;
+    $main.find('#three').show();
   }
 
  };
@@ -20,15 +20,15 @@ function start(taskId){
   var domElement = $main.find('#'+taskId);
   if (domElement.hasClass('completed') == false){
     domElement.removeClass("unactive")
-    domElement.find(".btn-action")[0].hidden = false;
-    domElement.find(".btn-action")[1].hidden = false;
+    domElement.find(".btn-action")[0].show();
+    domElement.find(".btn-action")[1].show();
   }
 }
 
 function cancel(taskId){
   var domElement = $main.find('#'+taskId);
-  domElement.find(".btn-action")[0].hidden = true;
-  domElement.find(".btn-action")[1].hidden = true;
+  domElement.find(".btn-action")[0].hide();
+  domElement.find(".btn-action")[1].hide();
   domElement.addClass("unactive")
 }
 
@@ -40,11 +40,6 @@ function achieve(taskId){
   localStorage.setItem('finishedTasks', finishedTasks);
   localStorage.setItem('score', score);
 
-  var domElement = $main.find('#'+taskId);
-  domElement.removeClass("undone");
-  domElement.addClass("completed");
-  domElement.find(".btn-action")[0].hidden = true;
-  domElement.find(".btn-action")[1].hidden = true;
-  domElement.hidden = true;
+  $main.find('#'+taskId).hide();
   localStorage.setItem('task'+taskId, '');
 }

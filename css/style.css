@@ -386,26 +386,21 @@ h2 {
 
 .task{
     padding: 0.5em;
-    width: 80%;
+    width: 90%;
     font-weight: 400;
-    margin: 1.5em;
+    margin-top: 1.5em;
 }
 
 .task>.label{
     display: block;
-    margin-bottom:0.5em;
+    margin-top:0.5em;
     color: #e61664;
     border-radius: 21px;
-    font-size: 1.4em;
     padding: 10px;
 }
 
 .task.undone>.label{
     background-color: #e61664;
-    color: #fff;
-}
-.task.completed>.label{
-    background-color: green;
     color: #fff;
 }
 
@@ -420,9 +415,6 @@ h2 {
 .task .btn-action{
     float: right;
     font-size: 0.8em;
-}
-.tasks .btn-action{
-    width: 50%;
 }
 
 /**

@@ -159,12 +159,18 @@
   <template style="display: none" id="challenge">
       <h1 class="text-blue text-center">Choisissez votre prochain défi</h1>
       <div class="tasks">
-          <input type="text" name="taskone" class="task text-center red-form">
-          <input type="text" name="tasktwo" class="task text-center red-form">
-          <input type="text" name="taskthree" class="task text-center red-form">
-
-          <a id="form-submit" class="btn-action text-center" href="#tasks">Valider</a>
-
+        <div class="task undone">
+            <input type="text" name="taskone" class="text-center red-form">
+            <button class="btn-action" onclick="validateTask('one')">Valider</button>
+        </div>
+        <div class="task undone">
+            <input type="text" name="tasktwo" class="text-center red-form">
+            <button class="btn-action" onclick="validateTask('two')">Valider</button>
+        </div>
+        <div class="task">
+            <input type="text" name="taskthree" class="text-center red-form">
+            <button class="btn-action" onclick="validateTask('three')">Valider</button>
+        </div>
           <div class="text-center">
             <img id="roue" class="colored-roue">
           </div>
