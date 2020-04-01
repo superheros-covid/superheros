@@ -9,7 +9,7 @@ Pages.challenge=function() {
   for(let i=0;i<taskIds.length; i++){
     id = taskIds[i];
     var storedTask = localStorage.getItem('task'+id);
-    if (storedTask.length){
+    if (storedTask != null){
       $('input[name=task'+id+']').val(storedTask)
     }
   }
