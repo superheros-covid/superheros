@@ -19,7 +19,7 @@ Pages.challenge=function() {
     for(let i=0;i<taskIds.length; i++){
       id = taskIds[i];
       var storedTask = localStorage.getItem('task'+id);
-      if (storedTask == null){
+      if (storedTask == null || storedTask == ""){
         randomTask = getRandomActivity();
         $('input[name=task'+id+']').val(randomTask);
       }
