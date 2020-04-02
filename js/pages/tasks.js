@@ -27,8 +27,8 @@ function start(taskId){
 
 function cancel(taskId){
   var domElement = $main.find('#'+taskId);
-  domElement.find(".btn-action")[0].hide();
-  domElement.find(".btn-action")[1].hide();
+  domElement.find(".btn-action")[0].hidden = true;
+  domElement.find(".btn-action")[1].hidden = true;
   domElement.addClass("unactive")
 }
 
@@ -39,6 +39,10 @@ function achieve(taskId){
   score += 10;
   localStorage.setItem('finishedTasks', finishedTasks);
   localStorage.setItem('score', score);
+
+  currentTaskNb = parseInt(localStorage.getItem('hasTask') || 0);
+  currentTaskNb -= 1;
+  localStorage.setItem('hasTask', currentTaskNb);
 
   $main.find('#'+taskId).hide();
   localStorage.setItem('task'+taskId, '');
