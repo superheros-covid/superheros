@@ -230,6 +230,28 @@
     <a href="#challenge" id="challenge-link" class="sh-btn btn-blue">Nouveaux défis</a>
     <img src="/img/stripes.png" class="sh-background full-size">
   </template>
+<template style="display: none" id="conclude">
+    <h2 class="text-blue text-center">BRAVO <span data-local-storage data-property="innerHTML" data-key="name"></span> !</h2>
+    <p class="text-blue text-center">Grace à vos efforts vous avez:</p>
+
+    <div class="recap-grid">
+        <div class="recap-brief width50">
+            <img class="colored-virus">
+          <span class="text-blue subtext">évité <span class="colored-number">10</span> nouvelles contaminations</span>
+        </div>
+        <div class="recap-brief width50">
+            <img class="colored-cmask" class="cmask">
+          <span class="text-blue subtext">Empêché <span class="colored-number">3</span> nouvelles hospitalisations</span>
+        </div>
+        <div class="recap-brief block-conclude">
+            <img class="colored-trophy">
+            <span class="text-blue conclude">Sauvé <span class="colored-number">1</span> vie</span>
+          </div>
+    </div>
+
+    <p class="text-blue text-center">Vous pouvez être fier(e)</p>
+    <p class="text-blue text-center">Le monde a besoin de héros comme vous !</p>
+</template>
   <template style="display: none" id="soon">
       <header>
           <img src="/img/logo.png" alt="Logo" class="sh-logo">
@@ -252,6 +274,7 @@
   <script src="/js/pages/welcome.js"></script>
   <script src="/js/pages/capacity.js"></script>
   <script src="/js/pages/gain.js"></script>
+  <script src="/js/pages/conclude.js"></script>
   <script src="/js/pages/tasks.js"></script>
   <script src="/js/pages/score.js"></script>
   <script src="/js/pages/challenge.js"></script>
@@ -271,6 +294,7 @@
       'capacity': Pages.capacity,
       'welcomeTeam': Pages.welcomeTeam,
       'gain': Pages.gain,
+      'conclude': Pages.conclude,
       'tasks': Pages.tasks,
       'score': Pages.score,
       'challenge': Pages.challenge,

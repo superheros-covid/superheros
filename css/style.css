@@ -190,6 +190,11 @@ h2 {
 .text-red {
     color: #e71165 !important;
 }
+.text-team-blue {color:#50C0DB;}
+.text-team-yellow {color:#F9AF1A;}
+.text-team-orange {color:#EC681B;}
+.text-team-red {color:#e71265;}
+
 .text-center {
     text-align: center;
 }
@@ -436,3 +441,26 @@ h2 {
     color: #e71265;
     font-size: 2.4em;
 }
+
+.recap-grid{
+    margin: 1em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.width50{width: 50%; float: left;}
+.cmask{margin-top: 42px;}
+.recap-brief{
+    text-align: center;
+}
+.block-conclude{
+    display: flex;
+    margin: 1em;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+}
+.recap-brief .subtext{display: block; margin-top: 0.4em; font-size: 1.4em;}
+.recap-brief .conclude{font-size: 1.5em; font-weight: 600;}
+.colored-number{font-weight: 800;}
