@@ -85,7 +85,10 @@ button {
     text-decoration: none;
     display: inline-block;
 }
-
+.btn-blue {
+	background-color: #84d275;
+	color: #064a06;
+}
 .btn-blue{background-color: #082660; color:#fff}
 .btn-red{background-color: #e61664;}
 
@@ -423,6 +426,11 @@ h2 {
     border-radius: 21px;
     padding: 8px 16px;
     margin: 4px;
+}
+
+.btn-actions-wrapper{
+    margin-top:1em;
+    text-align: center;
 }
 
 .full_width{width: 90%;}
