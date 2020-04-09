@@ -4,12 +4,14 @@ Pages.trophy=function() {
   $main.html($('#trophy').html());
 
   var team = teamNeeded();
-  $main.find('.colored-number').attr('class', 'circle lifes-value text-team-'+team);
+  var savedLifes = parseFloat(localStorage.getItem('lifes') || 0);
+
+  $main.find('.lifes-value').attr('class', 'circle lifes-value text-team-'+team);
+  $main.find('.lifes-value')[0].childNodes[0].nodeValue= Math.round(savedLifes);
 
   $main.find('.trophy-wrapper-header').attr('class', 'trophy-wrapper-header bg-'+team);
 
   levels = [1, 3, 5, 10, 15, 20, 25, 30, 40, 50, 75, 100, 150, 200];
-  var savedLifes = parseFloat(localStorage.getItem('lifes') || 0);
   trophies = [];
   for(i=0;i<this.levels.length;i++){
     if(levels[i] <= savedLifes){
