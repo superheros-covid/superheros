@@ -241,7 +241,7 @@
     <div class="recap-grid">
         <div class="recap-brief width50">
             <img class="colored-virus">
-          <span class="text-blue subtext">évité <span class="colored-number">10</span> nouvelles contaminations</span>
+          <span class="text-blue subtext">Evité <span class="colored-number">10</span> nouvelles contaminations</span>
         </div>
         <div class="recap-brief width50">
             <img class="colored-cmask cmask">
@@ -253,7 +253,10 @@
           </div>
     </div>
 
-    <p class="text-blue text-center">Vous pouvez être fier(e)<br>Le monde a besoin de héros comme vous !</p>
+    <p class="text-blue text-center">
+      <span id="new-trophy"></span>
+      Vous pouvez être fier(e)<br>Le monde a besoin de héros comme vous !
+    </p>
     <a href="#dashboard" class="sh-btn btn-blue">Nouvelle journée</a>
 </template>
   <template style="display: none" id="soon">
@@ -281,6 +284,7 @@
   <script src="/js/pages/conclude.js"></script>
   <script src="/js/pages/tasks.js"></script>
   <script src="/js/pages/score.js"></script>
+  <script src="/js/pages/trophy.js"></script>
   <script src="/js/pages/challenge.js"></script>
   <script src="/js/pages/welcomeTeam.js"></script>
   <script src="/js/pages/dashboard.js"></script>
@@ -300,6 +304,7 @@
       'gain': Pages.gain,
       'conclude': Pages.conclude,
       'tasks': Pages.tasks,
+      'trophy': Pages.trophy,
       'score': Pages.score,
       'challenge': Pages.challenge,
       'dashboard': Pages.dashboard,
