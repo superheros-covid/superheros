@@ -4,9 +4,9 @@ Pages.trophy=function() {
   $main.html($('#trophy').html());
 
   var team = teamNeeded();
-  $main.find('.colored-number').attr('class', 'text-team-'+team);
+  $main.find('.colored-number').attr('class', 'circle lifes-value text-team-'+team);
 
-  $main.find('.trophy-wrapper-header').attr('class', 'bg-'+team);
+  $main.find('.trophy-wrapper-header').attr('class', 'trophy-wrapper-header bg-'+team);
 
   levels = [1, 3, 5, 10, 15, 20, 25, 30, 40, 50, 75, 100, 150, 200];
   var savedLifes = parseFloat(localStorage.getItem('lifes') || 0);
@@ -25,6 +25,6 @@ Pages.trophy=function() {
     imageIndex = levelIndex+1; /* levelIndex=0 <=> level 1 / image trophy_1.png */
     var img = new Image();
     img.src = '/img/colors_decline/'+team+'/trophy_'+imageIndex+'.png';
-    $main.find('.trophy-wrapper').appendChild(img); 
+    $main.find('.trophy-wrapper').append(img); 
   }
 };
