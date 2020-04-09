@@ -147,7 +147,7 @@
 
       <div class="sh-actions">
           <a href="#score" class="text-blue text-center"><img class="colored-reward"><br>Récompenses</a>
-          <a href="#soon" class="text-blue text-center unactive"><img class="colored-trophy"><br>Trophées</a>
+          <a href="#trophy" class="text-blue text-center"><img class="colored-trophy"><br>Trophées</a>
       </div>
       <div id="life-counter" class="text-center"></div>
 
@@ -194,17 +194,24 @@
         <img src="img/6-gain/badge.png" alt="Niveau 1">
     </div>
   </template>
-    <template style="display: none" id="soon">
-        <header>
-            <img src="/img/logo.png" alt="Logo" class="sh-logo">
-        </header>
-        <div class="text-center">
-            <h1>Bientôt !</h1>
-            <h2 class="text-color-team">Restez chez vous!</h2>
-            <h2 class="hidden visible-blue text-color-team">Vous  éviterez  potentiellement:<ul style="padding-left:0;list-style: none"><li>80 hospitalisations</li><li>40 réanimations</li><li>et 8 décès.</li></ul></h2>
-            <h2 class="hidden visible-yellow text-color-team">Vous  éviterez  potentiellement:<ul style="padding-left:0;list-style: none"><li>100 hospitalisations</li><li>50 réanimations</li><li>et 12 décès.</li></ul></h2>
-            <h2 class="hidden visible-orange text-color-team">Vous  éviterez  potentiellement:<ul style="padding-left:0;list-style: none"><li>100 hospitalisations</li><li>50 réanimations</li><li>et 12 décès.</li></ul></h2>
-            <h2 class="hidden visible-red text-color-team">Vous  éviterez  potentiellement:<ul style="padding-left:0;list-style: none"><li>120 hospitalisations</li><li>60 réanimations</li><li>et 16 décès.</li></ul></h2>
+    <template style="display: none" id="trophy">
+        <a href="#dashboard">
+            <img src="img/arrow-right-left.png" alt="Retour">
+          </a>
+          <h2 class="blue text-center">Trophés</h2>
+          <div class="life-counter">
+            <div class="circle lifes-value colored-number">
+              3
+            </div>
+            <span class="text-blue">vies sauvées</span>
+          </div>
+          <div>
+            <div class="trophy-wrapper-header"></div>
+            <div class="trophy-wrapper">
+            </div>
+            <div class="trophy-wrapper-footer text-center">
+                <span class="text-white">Continuez à obtenir des trophés afin de changer de niveau.</span>
+            </div>
         </div>
     </template>
   <template style="display: none" id="tasks">
