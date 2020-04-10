@@ -36,7 +36,7 @@ function achieve(taskId){
   var finishedTasks = parseInt(localStorage.getItem('finishedTasks') || 0);
   var score = parseInt(localStorage.getItem('score') || 0);
   finishedTasks += 1;
-  score += 10;
+  score += 5;
   localStorage.setItem('finishedTasks', finishedTasks);
   localStorage.setItem('score', score);
 
