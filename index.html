@@ -178,21 +178,17 @@
       </div>
   </template>
   <template style="display: none" id="score">
-    <a href="#dashboard"><img src="/img/arrow-right-left.png" alt="Retour"></a>
-    <h1 class="text-blue text-center">Médailles</h1>
-
-    <div class="score-label text-center">
-      <p>
-        Vous avez actuellement 
-        <span data-local-storage data-property="innerHTML" data-key="score" class="score-counter">0</span> 
-        points.
-      </p>
-      <p>Continuez à accomplir des missions afin d'obtenir des médailles.</p> 
-    </div>
-
-    <div class="badges-wrapper text-center">
-        <img src="img/6-gain/badge.png" alt="Niveau 1">
-    </div>
+      <a href="#dashboard"><img src="img/arrow-right-left.png" alt="Retour"></a>
+      <h1 class="text-blue text-center">Médailles</h1>
+        <div class="score-counter">
+          <div class="circle score-value colored-number" data-local-storage data-property="innerHTML" data-key="score" >
+            0
+          </div>
+          <span class="text-blue">points</span>
+        </div>
+      <div class="medails-wrapper-header bg-blue2"></div>
+      <div class="medails-wrapper">
+      </div>
   </template>
     <template style="display: none" id="trophy">
         <a href="#dashboard">
