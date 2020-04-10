@@ -338,6 +338,12 @@
       return team
     }
 
+    function incrementLocalStorageEntry(key, valueToAdd){
+      currentValue = parseInt(localStorage.getItem(key) || 0);
+      currentValue += valueToAdd;
+      localStorage.setItem(key, currentValue);
+    }
+
     function getTeamName(feminine, plural) {
       var team = teamNeeded();
 

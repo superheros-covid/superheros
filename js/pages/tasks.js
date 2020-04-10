@@ -33,17 +33,30 @@ function cancel(taskId){
 }
 
 function achieve(taskId){
-  var finishedTasks = parseInt(localStorage.getItem('finishedTasks') || 0);
-  var score = parseInt(localStorage.getItem('score') || 0);
-  finishedTasks += 1;
-  score += 5;
-  localStorage.setItem('finishedTasks', finishedTasks);
-  localStorage.setItem('score', score);
-
-  currentTaskNb = parseInt(localStorage.getItem('hasTask') || 0);
-  currentTaskNb -= 1;
-  localStorage.setItem('hasTask', currentTaskNb);
+  incrementLocalStorageEntry('finishedTasks', 1);
+  incrementLocalStorageEntry('score', 5);
+  incrementLocalStorageEntry('hasTask', -1);
 
   $main.find('#'+taskId).hide();
+  taskLabel = localStorage.getItem('task'+taskId);
   localStorage.setItem('task'+taskId, '');
+
+  if(taskLabel.search('film') > 0){
+    incrementLocalStorageEntry('art_score', 1);
+  } else {
+    if(taskLabel.search('Téléphoner') > 0){
+      incrementLocalStorageEntry('com_score', 1);
+    } else {
+      if(taskLabel.search('yoga') > 0 || taskLabel.search('méditation') > 0){
+        incrementLocalStorageEntry('spo_score', 1);
+      } else {
+        var artActivitiesKeywords = new RegExp('podcast|livre|photo|peinture|projet|cours|écrit', 'g');
+        if (artActivitiesKeywords.test(taskLabel)) {
+          incrementLocalStorageEntry('art_score', 1);
+        } else {
+          incrementLocalStorageEntry('hom_score', 1);
+        }
+      }
+    }
+  }
 }
