@@ -42,7 +42,7 @@ function achieve(taskId){
   localStorage.setItem('task'+taskId, '');
 
   if(taskLabel.search('film') > 0){
-    incrementLocalStorageEntry('art_score', 1);
+    incrementLocalStorageEntry('tv_score', 1);
   } else {
     if(taskLabel.search('Téléphoner') > 0){
       incrementLocalStorageEntry('com_score', 1);
