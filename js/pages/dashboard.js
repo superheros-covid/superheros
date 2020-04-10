@@ -6,9 +6,19 @@ Pages.dashboard=function() {
   }
   $main.html($('#dashboard').html());
   $body.attr('class', 'page-dashboard');
-  $main.find('.colored-profile').attr('src', '/img/colors_decline/'+team+'/profile.png');
   $main.find('.colored-reward').attr('src', '/img/colors_decline/'+team+'/reward.png');
   $main.find('.colored-trophy').attr('src', '/img/colors_decline/'+team+'/trophy.png');
+
+  /* Profile */
+  var savedLifes = parseFloat(localStorage.getItem('lifes') || 0);
+  heroLevel = 1;
+  heroLevels = [0, 5, 20, 75, 200];
+  for (i=0; i<heroLevels.lenght;i++){
+    if(savedLifes >= heroLevels[i]){
+      heroLevel = i + 1;
+    }
+  }
+  $main.find('.colored-profile').attr('src', '/img/colors_decline/'+team+'/profile_'+heroLevel+'.png');
 
   if(localStorage.getItem('hasTask') > 0) {
     $main.find('#btn-tasks').show();
