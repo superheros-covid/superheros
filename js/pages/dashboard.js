@@ -13,7 +13,7 @@ Pages.dashboard=function() {
   var savedLifes = parseFloat(localStorage.getItem('lifes') || 0);
   heroLevel = 1;
   heroLevels = [0, 5, 20, 75, 200];
-  for (i=0; i<heroLevels.lenght;i++){
+  for (i=0; i<heroLevels.length;i++){
     if(savedLifes >= heroLevels[i]){
       heroLevel = i + 1;
     }
